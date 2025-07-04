@@ -1,0 +1,114 @@
+@import './base.css';
+
+body {
+  font-family: 'Unbounded', 'Inter', Arial, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s, color 0.5s;
+  overflow-x: hidden;
+  letter-spacing: 0.04em;
+  font-size: 16px;
+}
+
+/* Scrollbar simples */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background-mute);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+/* Links amarelos sublinhados */
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: none;
+  border-radius: 0;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+a:hover {
+  color: var(--color-accent-soft);
+}
+
+/* Listas sem marcadores */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Inputs e botões básicos */
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #222;
+  color: #fff;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+button {
+  background: var(--color-accent);
+  color: var(--color-background);
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 8px 18px;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  background: var(--color-accent-soft);
+  color: var(--color-background);
+  box-shadow: 0 4px 16px #0004;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Unbounded', 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-top: 0;
+  letter-spacing: 0.12em;
+  text-shadow: 0 2px 12px #000, 0 1px 0 var(--color-accent);
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Remove estilos de navegação sofisticados */
+nav, nav a, nav a.router-link-exact-active {
+  all: unset;
+}
+
+/* Remove animações e efeitos visuais globais */
+.animate-float, .animate-glow {
+  animation: none !important;
+}
+
+/* Foco simples */
+*:focus {
+  outline: 2px solid #ffe066;
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-background);
+}
+
+::-moz-selection {
+  background: #ffe066;
+  color: #181716;
+}
